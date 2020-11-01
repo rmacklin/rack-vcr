@@ -36,7 +36,7 @@ jobs:
           RACK_VERSION: ${{ matrix.rack_version }}
           MEASURE_COVERAGE: ${{ matrix.measure_coverage }}
       - uses: actions/upload-artifact@v2
-        if: ${{ matrix.measure_coverage == true }}
+        if: ${{ matrix.measure_coverage }}
         with:
           name: code-coverage-report
           path: coverage/
